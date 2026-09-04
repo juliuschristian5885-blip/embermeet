@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-cream-100 text-charcoal-700 dark:bg-charcoal-900 dark:text-cream-100 transition-colors duration-300;
+  }
+
+  * {
+    @apply border-charcoal-200/30 dark:border-charcoal-700/30;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-terracotta-400 hover:bg-terracotta-500 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 shadow-lg shadow-terracotta-400/20 hover:shadow-terracotta-400/30 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply bg-cream-200 hover:bg-cream-300 dark:bg-charcoal-700 dark:hover:bg-charcoal-600 text-charcoal-700 dark:text-cream-100 font-semibold px-6 py-3 rounded-xl transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply text-charcoal-600 dark:text-cream-300 hover:bg-cream-200 dark:hover:bg-charcoal-700 font-medium px-4 py-2 rounded-lg transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full bg-cream-50 dark:bg-charcoal-800 border border-cream-300 dark:border-charcoal-600 rounded-xl px-4 py-3 text-charcoal-700 dark:text-cream-100 placeholder-charcoal-400 dark:placeholder-cream-500 focus:outline-none focus:ring-2 focus:ring-terracotta-400/50 focus:border-terracotta-400 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white dark:bg-charcoal-800 rounded-2xl shadow-lg shadow-charcoal-900/5 border border-cream-200 dark:border-charcoal-700 transition-all duration-300;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+
+  .badge-online {
+    @apply bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400;
+  }
+
+  .badge-distance {
+    @apply bg-ember-100 text-ember-700 dark:bg-ember-900/30 dark:text-ember-400;
+  }
+
+  .badge-gender {
+    @apply bg-cream-200 text-charcoal-600 dark:bg-charcoal-700 dark:text-cream-300;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium bg-ember-50 text-ember-700 dark:bg-ember-900/20 dark:text-ember-400;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cream-400 dark:bg-charcoal-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-terracotta-300 dark:bg-charcoal-500;
+}
+
+/* Smooth scroll for chat */
+.chat-scroll {
+  scroll-behavior: smooth;
+}
